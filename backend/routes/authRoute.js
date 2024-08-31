@@ -19,7 +19,7 @@ router.get('/me', authMiddleware, async (req, res) => {
     }
   });
 
- 
+  router.post('/refresh-token', authController.refresh_token); 
   
    
 export default router;
