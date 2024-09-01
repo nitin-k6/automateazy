@@ -1,4 +1,4 @@
-How to Start the application
+How to Start the application( It is working application with UI)
 
 1. cd backend   // This will jump into backend directory
 2.  npm start // This will start the server
