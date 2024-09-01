@@ -10,6 +10,7 @@ const router = express.Router();
 router.post('/register', authValidator.validateRegister, authController.registerUser);
 router.post('/login', authController.loginUser);
 
+
 router.get('/me', authMiddleware, async (req, res) => {
     try {
       const user = await User.findById(req.user).select('-password');

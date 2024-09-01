@@ -29,7 +29,7 @@ const registerUser = async (req, res) => {
     }
   };
 
-  
+
    // Function to handle user login
    const loginUser = async (req, res) => {
     try {
@@ -47,7 +47,7 @@ const registerUser = async (req, res) => {
              
     // Generate a JWT token for the user
       const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
-        expiresIn: process.env.JWT_EXPIRES_IN,
+        expiresIn: 3600,
       });
   
       res.json({ token, user: { id: user._id, email: user.email } }); // Send a success response with the token and user details
